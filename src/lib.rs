@@ -6,7 +6,7 @@ use crate::{
         AppBuilderOptions,
     },
     providers::{
-        crystal::CrystalProvider, deno::DenoProvider, go::GolangProvider,
+        crystal::CrystalProvider, deno::DenoProvider, elixir::ElixirProvider, go::GolangProvider,
         haskell::HaskellStackProvider, node::NodeProvider, python::PythonProvider,
         rust::RustProvider,
     },
@@ -27,6 +27,7 @@ pub fn get_providers() -> Vec<&'static dyn Provider> {
         &PythonProvider {},
         &HaskellStackProvider {},
         &CrystalProvider {},
+        &ElixirProvider {},
     ]
 }
 
